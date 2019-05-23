@@ -1,0 +1,26 @@
+<h1 align="center"> Welcome to <%= @user.username %>'s page</h1>
+
+<div class="row">
+	<div class="col-sm-12 center" align="center">
+		<%= gravatar_for @user, size: 150 %>
+	</div>
+</div>
+<div class="clearfix">
+
+</div>
+<h4 align="center"> <%= @user.username %>'s articles</h4>
+
+<div class="clearfix"></div>
+
+<div class="pagination-of articles">
+	<%= will_paginate @user_articles %>
+</div>
+
+<div class="clearfix"></div>
+<%= render 'articles/article' , obj: @user.articles %>
+<div class="clearfix"></div>
+
+<div class="pagination-of articles">
+	<%= will_paginate @user_articles %>
+</div>
+<div class="clearfix"></div>

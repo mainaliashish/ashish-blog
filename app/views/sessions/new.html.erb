@@ -1,0 +1,21 @@
+<h1 align="center">Login</h1>
+
+<div class="container">
+    <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+
+    <div class="form-group">
+        <%= f.label :email, class: "email" %>
+        <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :password, class: "password" %>
+        <%= f.password_field :password, class: "form-control", autofocus: true %>
+    </div>
+    <div class="form-group">
+        <%= f.submit("Login",  class: "btn btn-primary") %>
+        <%= link_to "Sign Up", signup_path, class: "btn btn-danger" %>
+    </div>
+    <% end %>
+
+</div>

@@ -1,0 +1,183 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background: lightgreen !important;
+}
+
+body, p, h1, h2, h3, h4, h5, strong, small {
+
+font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+span, div, a, li {
+
+font-family: 'Karla', sans-serif;
+
+}
+
+@import "bootstrap";
+
+#logo{
+	float: left;
+	font-size: 1.7em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+#logo:hover{
+	color: #fff;
+	text-decoration: none;
+}
+
+.center{
+	text-align: center;
+}
+
+.jumbotron {
+  background-image:  asset-url('full_cover.jpg');
+  background-repeat: no-repeat;
+  height: 550px;
+}
+
+.clearfix {
+    margin-top: 20px;
+}
+
+.page-title {
+    color: firebrick;
+    font-weight: 600;
+    text-shadow: 2px 2px indigo;
+}
+
+.card.bg-ligth.col-xs-8.article_head {
+    padding-top: 6px;
+    padding-left: 6px;
+    background: azure;
+    color: firebrick;
+}
+
+strong.article_t {
+    color: purple;
+    text-shadow: 2px 2px springgreen;
+}
+
+span.article_d {
+    padding-left: 6px;
+    padding-right: 4px;
+    justify-content: center;
+}
+
+span.article-t {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.articles-action{
+    border-top: 1px solid #eaea;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.description{
+    margin-top: 12px;
+}
+
+.article-title{
+    text-align: center;
+}
+
+.footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaea;
+	color: #777;
+}
+
+.footer.a:hover{
+	color: #222;
+}
+
+.footer small{
+	float: left;
+}
+
+footer ul{
+	float: right;
+	list-style: none;
+}
+
+footer ul li {
+	float: left;
+	margin-left: 15px;
+}
+
+.alert-danger {
+    color: red;
+    background-color: pink;
+    border-color: coral;
+    box-shadow: 2px 2px crimson;
+    text-shadow: 2px 2px lightgreen;
+}
+
+.alert-info {
+    color: purple;
+    background-color: palegreen;
+    border-color: #bee5eb;
+    box-shadow: 2px 2px darkgreen;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 2px 2px lightpink;
+}
+
+.card.article {
+    margin-top: 15px;
+}
+
+.card-header.article {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+span.article-user {
+    float: right;
+    font-size: 15px;
+    color: rebeccapurple;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.card.text-center.w-50.bg-white.border-primary {
+    margin-left: 267px;
+}
+
+a.test {
+    text-shadow: 2px 2px yellow;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+h1.users {
+    color: green;
+    text-shadow: 2px 2px tomato;
+    font-weight: 500;
+}
+
+img.circle.rounded {
+    width: 100px;
+    height: auto;
+}
+
+small, .small {
+    font-size: 80%;
+    font-weight: 600;
+}
+
+.col-sm-12.center {
+    padding-top: 12px;
+}
+
+.pagination-of.articles {
+    float: right;
+}

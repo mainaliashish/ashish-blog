@@ -1,0 +1,18 @@
+<% obj.each do |article| %>
+
+<div class="card article">
+  <div class="card-header article">
+    <%= link_to article.title, article_path(article) %>
+       <span class="article-user"> <small><strong>Publisher : </strong> <%= article.user.username if article.user %> , <%= time_ago_in_words(article.created_at) %> ago , Last updated : <%= time_ago_in_words(article.updated_at) %> ago</small></span>
+  </div>
+  <div class="card-body display">
+    <% if logged_in? && current_user == article.user %>
+    <p class="card-text"><%= truncate(article.description, length: 400) %></p>
+    <%= link_to "Edit Article", edit_article_path(article), class: "btn btn-primary" %>
+	<%= link_to "Delete Article", article_path(article), method: :delete, data: {confirm: "Are You Sure?"}, class: "btn btn-danger" %>
+  <% end %>
+	<%= link_to "Show Article", article_path(article), class: "btn btn-info" %>
+
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,29 @@
+<h1 align="center" class="users"> All Blog Users </h1>
+
+<div class="pagination-of articles">
+	<%= will_paginate @articles %>
+</div>
+<div class="clearfix"></div>
+<% @users.each do |user| %>
+
+<div class="card text-center w-50 bg-white border-primary" align="center">
+  <div class="card-header">
+    <span class="image-user rounded img-circle img-rounded"><%= link_to gravatar_for(user), user_path(user), size: 150 %></span>
+<div class="clearfix"></div>
+   <h5 class="card-title"> <%= link_to user.username, user_path(user), class: "test" %></h5>
+    <p class="card-text"><small>Total published : <%= pluralize(user.articles.count, "articles") if user.articles %></small></p>
+
+	<span class="article-user"><small>
+		Last update : <%= time_ago_in_words(user.updated_at) %> ago</small>
+	</span>
+</div>
+</div>
+<div class="clearfix"></div>
+
+<% end %>
+
+<div class="pagination-of articles">
+	<%= will_paginate @articles %>
+</div>
+
+<div class="clearfix"></div>

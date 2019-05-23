@@ -1,0 +1,6 @@
+<% flash.each do |name, msg| %>
+<div class='alert alert-<%= "#{name}" %>' role="alert">
+	<a href="#" class="close" data-dismiss="alert">&#215</a>
+    <%= msg %>
+</div>
+<% end %>
