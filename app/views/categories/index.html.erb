@@ -1,0 +1,25 @@
+<h2>Listing All Categories</h2>
+
+<div class="pagination-of articles">
+  <%= will_paginate @articles %>
+</div>
+<% @categories.each do |category| %>
+<div class="clearfix"></div>
+<div class="card article">
+  <div class="card-header article">
+    <%= link_to category.name, category_path(category) %>
+       <span class="article-user"> <small><%= time_ago_in_words(category.created_at) %> ago , Last updated : <%= time_ago_in_words(category.updated_at) %> ago</small></span>
+  </div>
+    <% if logged_in? && (current_user ==  current_user.admin?) %>
+  <div class="card-body display">
+    <%= link_to "Edit Category", edit_category_path(category), class: "btn btn-primary" %>
+  </div>
+  <% end %>
+</div>
+<% end %>
+<div class="clearfix"></div>
+
+<div class="pagination-of articles">
+  <%= will_paginate @articles %>
+</div>
+<div class="clearfix"></div>
