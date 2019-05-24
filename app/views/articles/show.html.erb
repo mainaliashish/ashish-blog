@@ -28,7 +28,7 @@
 
 	</span>
 <div class="articles-action">
-<% if logged_in? && current_user == @article.user %>
+<% if logged_in? && (current_user == @article.user || current_user.admin?) %>
     <%= link_to "Edit this Article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
     <%= link_to "Delete This Article", article_path(@article), method: :delete, 				data: { confirm: "Are You Sure you want to delete the article?" }, 				class: "btn btn-xs btn-danger" %>
 <% end %>
