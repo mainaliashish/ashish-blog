@@ -182,3 +182,29 @@ small, .small {
 .pagination-of.articles {
     float: right;
 }
+
+label.checkbox-inline.input_checkbox.custom {
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+    margin-right: 2px;
+}
+
+small.custom-small {
+    margin-left: 4px;
+    color: seagreen;
+    font-size: 14px;
+}
+
+a.badge.badge-primary.custom {
+    font-size: 13x;
+    box-shadow: 3px 2px black;
+    text-transform: uppercase;
+}
+
+.article-count {
+    color: seagreen;
+}

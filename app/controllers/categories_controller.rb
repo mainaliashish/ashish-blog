@@ -22,6 +22,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def show
+		@category_articles = @Category.articles.paginate(page: params[:page], per_page: 5)
 	end
 
 	private

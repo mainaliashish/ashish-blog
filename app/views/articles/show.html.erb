@@ -24,6 +24,9 @@
 	<span class="article_d">
     <%= simple_format(@article.description) %>
 	</span>
+	<% if @article.categories.any? %>
+	<p> <small class="custom-small">Categories : </small> <%= render @article.categories  %></p>
+	<% end %>
 	<span class="article-user"> <strong>Published by : </strong>  <%= @article.user.username %>
 
 	</span>

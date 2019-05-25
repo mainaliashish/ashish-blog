@@ -6,8 +6,11 @@
        <span class="article-user"> <small><strong>Publisher : </strong> <%= article.user.username if article.user %> , <%= time_ago_in_words(article.created_at) %> ago , Last updated : <%= time_ago_in_words(article.updated_at) %> ago</small></span>
   </div>
   <div class="card-body display">
-    <% if logged_in? && (current_user == article.user || current_user.admin?) %>
     <p class="card-text"><%= truncate(article.description, length: 400) %></p>
+  <% if article.categories.any? %>
+  <p> <small class="custom-small">Categories : </small> <%= render article.categories  %></p>
+  <% end %>
+    <% if logged_in? && (current_user == article.user || current_user.admin?) %>
     <%= link_to "Edit Article", edit_article_path(article), class: "btn btn-primary" %>
 	<%= link_to "Delete Article", article_path(article), method: :delete, data: {confirm: "Are You Sure?"}, class: "btn btn-danger" %>
   <% end %>

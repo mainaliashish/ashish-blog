@@ -10,7 +10,8 @@
 <div class="card article">
   <div class="card-header article">
     <%= link_to category.name, category_path(category) %>
-       <span class="article-user"> <small><%= time_ago_in_words(category.created_at) %> ago , Last updated : <%= time_ago_in_words(category.updated_at) %> ago</small></span>
+    <div class="article-count"><small class="badge badge-primary""><%= pluralize(category.articles.count, "Article")%></small></div>
+       <span class="article-user"> <small>Created : <%= time_ago_in_words(category.created_at) %> ago , Last updated : <%= time_ago_in_words(category.updated_at) %> ago</small></span>
   </div>
     <% if logged_in? && (current_user ==  current_user.admin?) %>
   <div class="card-body display">
