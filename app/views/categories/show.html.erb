@@ -1,4 +1,4 @@
-<h2><%= "Category: " + @Category.name %></h2>
+<h2><%= "Category: " + @category.name %></h2>
 <div class="new-article">
 
 <%= link_to "Create a New Article", new_article_path, class: "btn btn-warning" %>
@@ -6,6 +6,7 @@
 </div>
 
 <div class="pagination-of articles">
+	<h4><%= link_to "Edit Category", edit_category_path(@category), class:"badge badge-primary" %></h4>
 	<%= will_paginate @category_articles %>
 </div>
 <div class="clearfix"></div>
