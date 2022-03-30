@@ -20,7 +20,7 @@ gem 'will_paginate', '3.1.7'
 gem 'will_paginate-bootstrap4'
 # gem 'will_paginate-bootstrap'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'bootstrap', '~> 4.3.1'
 gem 'sass-rails', '~> 5.0'
